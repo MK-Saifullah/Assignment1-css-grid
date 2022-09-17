@@ -1,0 +1,258 @@
+/** Not allowed to change this initial CSS code **/
+body {
+	background: url(../img/12_col.gif) center top repeat-y;
+	background-size: 90%;
+}
+/*************************************************/
+
+/* Common CSS */
+header, .box-1, .box-2, .box-3, main, aside, footer, .footer-section1, .footer-section2, .footer-section3, .footer-section4{
+	border: 2px solid black;
+	min-height: 100px;
+}
+#container{
+	width: 89.5%;
+	margin: 0 auto;
+}
+
+
+
+
+  
+  /* Small devices (portrait tablets and large phones) */
+  @media only screen and (max-width: 767px){
+	
+			/* Box area */
+			.box-1{
+				grid-area: box1;
+			}
+			.box-2{
+				grid-area: box2;
+			}
+			.box-3{
+				grid-area: box3;
+			}
+	#box {
+		display: grid;
+		grid-template-columns: auto; 
+		grid-template-areas: 
+		"box1 box1 box1"
+		"box2 box2 box2"
+		"box3 box3 box3"
+		;
+		column-gap: 2%;
+		row-gap: 20px;
+	}
+		/* Content aside area */
+		main{
+			grid-area: content;
+		}
+		aside {
+			grid-area: sidebar;
+		}
+		#content-sidebar {
+			display: grid;
+			width: auto;
+			grid-template-columns: auto;
+			grid-template-areas: 
+			"content content"
+			"sidebar sidebar";
+			column-gap: 2%;
+			row-gap: 20px;
+		}
+
+	/* Footer area */
+	.footer-section1 {
+		grid-area: footer1;
+	}
+	.footer-section2 {
+		grid-area: footer2;
+	}
+	.footer-section3 {
+		grid-area: footer3;
+	}
+	.footer-section4 {
+		grid-area: footer4;
+	}
+	#footer {
+		display: grid;
+		height: 480px;
+		justify-content: center;
+		align-items: center;
+		grid-template-columns: repeat(4, 1fr); 
+		grid-template-areas: 
+		"footer1 footer1 footer1 footer1"
+		"footer2 footer2 footer2 footer2"
+		"footer3 footer3 footer3 footer3"
+		"footer4 footer4 footer4 footer4"
+		;
+		column-gap: 2%;
+		padding: 5px;
+	}
+	}
+  
+  
+  
+  /* Medium devices (landscape tablets, 768px and up to 959px) */
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+	#header{
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+		"header"
+		;
+	}
+	
+	/* Box area */
+	#box {
+		display: grid;
+		width: auto;
+		grid-template-columns: repeat (3, 1fr); 
+		grid-template-areas: 
+		"box1 box2 box3";
+		column-gap: 2%;
+	}
+	
+	/* Content aside area */
+	main{
+		grid-area: content;
+	}
+	aside {
+		grid-area: sidebar;
+	}
+	#content-sidebar {
+		display: grid;
+		width: auto;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas: 
+		"content sidebar";
+		column-gap: 2%;
+	}
+	
+	/* Footer area */
+	
+	#footer {
+		display: grid;
+		height: 240px;
+		justify-content: center;
+		align-items: center;
+		grid-template-columns: repeat(2, 1fr); 
+		grid-template-areas: 
+		"footer footer"
+		"footer footer"
+		;
+		column-gap: 2%;
+		padding: 5px;
+	}
+	
+  } 
+  
+
+
+
+
+  /* Large devices (laptops/desktops, 960px and up) */
+  @media only screen and (min-width: 960px) and (max-width: 1199px) {
+	/* Header area */
+#header{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas: 
+	"header"
+	;
+}
+
+/* Box area */
+#box {
+	display: grid;
+	width: auto;
+	grid-template-columns: 23.5% auto 23.5%; 
+	grid-template-areas: 
+	"box1 box2 box3";
+	column-gap: 2%;
+}
+
+/* Content aside area */
+main{
+	grid-area: content;
+}
+aside {
+	grid-area: sidebar;
+}
+#content-sidebar {
+	display: grid;
+	width: auto;
+	grid-template-columns: auto 32%;
+	grid-template-areas: 
+	"content sidebar";
+	column-gap: 2%;
+}
+
+/* Footer area */
+
+#footer {
+	display: grid;
+	height: 120px;
+	justify-content: center;
+	align-items: center;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 2%;
+	padding: 5px;
+}
+  } 
+  
+
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+	/* Header area */
+#header{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas: 
+	"header"
+	;
+}
+
+/* Box area */
+#box {
+	display: grid;
+	width: auto;
+	grid-template-columns: 15% repeat(1, 1fr) 15%; 
+	grid-template-areas: 
+	"box1 box2 box3";
+	column-gap: 2%;
+	/* row-gap: 20px;
+	gap: 20px; */
+}
+
+/* Content aside area */
+main{
+	grid-area: content;
+}
+aside {
+	grid-area: sidebar;
+}
+#content-sidebar {
+	display: grid;
+	width: auto;
+	grid-template-columns: repeat(4, 1fr); /* */
+	grid-template-areas: 
+	"content content content sidebar";
+	column-gap: 2%;
+	/* row-gap: 20px; */
+}
+
+/* Footer area */
+
+#footer {
+	display: grid;
+	/* width: auto; */
+	height: 120px;
+	justify-content: center;
+	align-items: center;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 2%;
+	padding: 5px;
+}
+  }
